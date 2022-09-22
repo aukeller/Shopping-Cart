@@ -1,15 +1,20 @@
 import React from "react";
 import styles from "../styles/NavBar.module.css";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
     <div className={styles.container}>
       <div>The Crag</div>
-      <div className={styles.nav}>
-        <button>Home</button>
-        <button>Shop</button>
-        <span>Cart</span>
-      </div>
+      <ul className={styles.nav}>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/shop">Shop</Link>
+        </li>
+        <li>Cart</li>
+      </ul>
     </div>
   );
 };
