@@ -1,3 +1,8 @@
+@font-face {
+  font-family: Roboto-Bold;
+  src: url("../assets/roboto-font/Roboto-Bold.ttf");
+}
+
 .container {
   height: 150px;
 
@@ -8,10 +13,18 @@
   padding: 0 50px;
 }
 
+.container div:first-child {
+  font-family: Roboto-Bold;
+  font-size: 5em;
+}
+
 .nav {
   display: flex;
   justify-content: space-between;
   width: 30%;
+
+  font-family: Roboto-Bold;
+  font-size: 1.5em;
 }
 
 ul {

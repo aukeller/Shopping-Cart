@@ -1,3 +1,13 @@
+@font-face {
+  font-family: Roboto-Regular;
+  src: url("../assets/roboto-font/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-family: Roboto-Bold;
+  src: url("../assets/roboto-font/Roboto-Bold.ttf");
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -7,7 +17,8 @@
   background-image: url("../assets/climbing.jpg");
   background-repeat: no-repeat;
 
-  color: white;
+  font-family: Roboto-Regular;
+  color: rgb(255, 255, 255);
 }
 
 .header {
@@ -20,6 +31,17 @@
   width: 50%;
 
   padding-left: 50px;
+
+  font-family: Roboto-Bold;
+  font-size: 1.3em;
+}
+
+h1 {
+  margin-bottom: 0;
+}
+
+h3 {
+  margin-top: 10px;
 }
 
 .header button {
