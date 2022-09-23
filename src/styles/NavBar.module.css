@@ -16,6 +16,7 @@
 .container div:first-child {
   font-family: Roboto-Bold;
   font-size: 5em;
+  letter-spacing: 3px;
 }
 
 .nav {

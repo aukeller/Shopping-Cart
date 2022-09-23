@@ -46,4 +46,11 @@ h3 {
 
 .header button {
   width: 20%;
+  height: 3.5em;
+
+  background-color: white;
+  font-family: Roboto-Bold;
+  font-size: 0.75em;
+  letter-spacing: 0.2em;
+  border: none;
 }
