@@ -1,6 +1,7 @@
 import React from "react";
 import NavBar from "../components/NavBar";
 import Product from "../components/Product";
+import styles from "../styles/Shop.module.css";
 
 import productInfo from "../assets/product-data/productDetails";
 
@@ -23,7 +24,7 @@ const Shop = () => {
   return (
     <div>
       <NavBar />
-      <div>{generateProductList()}</div>
+      <div className={styles.productList}>{generateProductList()}</div>
     </div>
   );
 };
