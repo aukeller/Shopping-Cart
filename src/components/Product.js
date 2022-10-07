@@ -10,7 +10,7 @@ const Product = (props) => {
       <div className={styles.infoContainer}>
         <h3>{props.name}</h3>
         <span>{props.price}</span>
-        <button>Add to Cart</button>
+        <button onClick={props.addToCart}>Add to Cart</button>
       </div>
     </div>
   );

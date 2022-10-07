@@ -2,7 +2,7 @@ import React from "react";
 import styles from "../styles/NavBar.module.css";
 import { Link } from "react-router-dom";
 
-const NavBar = () => {
+const NavBar = ({ orderCount }) => {
   return (
     <div className={styles.container}>
       <div>The Crag</div>
@@ -13,7 +13,9 @@ const NavBar = () => {
         <li>
           <Link to="/shop">Shop</Link>
         </li>
-        <li>Cart</li>
+        <li>
+          Cart <span>{orderCount}</span>
+        </li>
       </ul>
     </div>
   );

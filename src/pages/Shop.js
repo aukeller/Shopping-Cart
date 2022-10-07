@@ -5,7 +5,7 @@ import styles from "../styles/Shop.module.css";
 
 import productInfo from "../assets/product-data/productDetails";
 
-const Shop = () => {
+const Shop = ({ orderCount, addToCart }) => {
   const generateProductList = () => {
     const productComponents = [];
     for (let product in productInfo) {
@@ -14,7 +14,13 @@ const Shop = () => {
       let image = productInfo[product].image;
 
       productComponents.push(
-        <Product key={name} name={name} price={price} image={image} />
+        <Product
+          key={name}
+          name={name}
+          price={price}
+          image={image}
+          addToCart={addToCart}
+        />
       );
     }
 
@@ -23,7 +29,7 @@ const Shop = () => {
 
   return (
     <div>
-      <NavBar />
+      <NavBar orderCount={orderCount} />
       <div className={styles.productList}>{generateProductList()}</div>
     </div>
   );
