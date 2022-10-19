@@ -4,6 +4,7 @@ import "./styles/main.css";
 
 import Home from "./pages/Home";
 import Shop from "./pages/Shop";
+import ProductDetail from "./pages/ProductDetail";
 
 function App() {
   const [orderCount, setOrderCount] = useState(0);
@@ -18,6 +19,7 @@ function App() {
           path="/shop"
           element={<Shop addToCart={addToCart} orderCount={orderCount} />}
         />
+        <Route path="shop/:id" element={<ProductDetail />} />
       </Routes>
     </BrowserRouter>
   );

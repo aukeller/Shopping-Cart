@@ -15,7 +15,8 @@ const Shop = ({ orderCount, addToCart }) => {
 
       productComponents.push(
         <Product
-          key={name}
+          key={`${product}`}
+          id={`${product}`}
           name={name}
           price={price}
           image={image}
