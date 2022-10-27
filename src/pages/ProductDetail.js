@@ -1,5 +1,6 @@
 import React from "react";
 import NavBar from "../components/NavBar";
+import Product from "../components/Product";
 import { useParams } from "react-router-dom";
 
 import productInfo from "../assets/product-data/productDetails";
@@ -13,14 +14,8 @@ const ProductDetail = ({ addToCart, orderCount }) => {
   return (
     <div>
       <NavBar orderCount={orderCount} />
-      <div>
-        <img src={image} alt="" />
-      </div>
-      <div>
-        <h3>{name}</h3>
-        <span>{price}</span>
-        <button onClick={addToCart}>Add to Cart</button>
-      </div>
+      <Product name={name} price={price} image={image} />
+      <button onClick={addToCart}>Add to Cart</button>
     </div>
   );
 };
