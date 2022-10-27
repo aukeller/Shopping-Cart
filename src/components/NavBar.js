@@ -14,7 +14,9 @@ const NavBar = ({ orderCount }) => {
           <Link to="/shop">Shop</Link>
         </li>
         <li>
-          Cart <span>{orderCount}</span>
+          <Link to="/cart">
+            Cart <span>{orderCount}</span>
+          </Link>
         </li>
       </ul>
     </div>
