@@ -15,11 +15,13 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home orderCount={orderCount} />} />
+        <Route path="/shop" element={<Shop orderCount={orderCount} />} />
         <Route
-          path="/shop"
-          element={<Shop addToCart={addToCart} orderCount={orderCount} />}
+          path="shop/:id"
+          element={
+            <ProductDetail addToCart={addToCart} orderCount={orderCount} />
+          }
         />
-        <Route path="shop/:id" element={<ProductDetail />} />
       </Routes>
     </BrowserRouter>
   );
