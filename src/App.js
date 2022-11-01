@@ -6,11 +6,13 @@ import Home from "./pages/Home";
 import Shop from "./pages/Shop";
 import ProductDetail from "./pages/ProductDetail";
 import Cart from "./pages/Cart";
+import { useEffect } from "react";
 
 function App() {
-  const [orderCount, setOrderCount] = useState(0);
+  const [cart, setCart] = useState([]);
+  const orderCount = cart.length;
 
-  const addToCart = () => setOrderCount(orderCount + 1);
+  useEffect(() => console.log(cart));
 
   return (
     <BrowserRouter>
@@ -20,7 +22,11 @@ function App() {
         <Route
           path="shop/:id"
           element={
-            <ProductDetail addToCart={addToCart} orderCount={orderCount} />
+            <ProductDetail
+              cart={cart}
+              setCart={setCart}
+              orderCount={orderCount}
+            />
           }
         />
         <Route path="/cart" element={<Cart />}></Route>
