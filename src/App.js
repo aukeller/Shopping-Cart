@@ -10,7 +10,7 @@ import { useEffect } from "react";
 
 function App() {
   const [cart, setCart] = useState([]);
-  const orderCount = cart.length;
+  const orderCount = cart.reduce((a, b) => a + b.count, 0);
 
   useEffect(() => console.log(cart));
 
@@ -29,7 +29,7 @@ function App() {
             />
           }
         />
-        <Route path="/cart" element={<Cart />}></Route>
+        <Route path="/cart" element={<Cart cart={cart} />}></Route>
       </Routes>
     </BrowserRouter>
   );
