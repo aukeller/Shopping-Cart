@@ -7,3 +7,7 @@
 
   margin-top: 5%;
 }
+
+.productList div {
+  height: 100%;
+}
