@@ -1,0 +1,32 @@
+.cartContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5%;
+  padding: 0 10%;
+
+  align-items: center;
+}
+
+.cartProduct {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8%;
+}
+
+.quantityContainer {
+  width: 50%;
+  height: 10%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.quantityContainer button {
+  height: 100%;
+  width: 30%;
+  font-size: 20px;
+  background-color: white;
+  border: 1px solid black;
+}
