@@ -3,7 +3,18 @@ import Product from "../components/Product";
 import NavBar from "../components/NavBar";
 import styles from "../styles/Cart.module.css";
 
+import { useState } from "react";
+import { useEffect } from "react";
+
 const Cart = ({ cart, orderCount, setCart }) => {
+  const [totalPrice, setTotalPrice] = useState(0);
+
+  useEffect(() => {
+    setTotalPrice(
+      totalPrice + cart.reduce((a, b) => a + parseFloat(b.price.slice(1)), 0)
+    );
+  }, [cart]);
+
   const increaseProdQty = (e) => {
     const cartCopy = [...cart];
     const prodIdx = parseInt(e.target.className);
@@ -43,6 +54,7 @@ const Cart = ({ cart, orderCount, setCart }) => {
     <div>
       <NavBar orderCount={orderCount} />
       <div className={styles.cartContainer}>{productList}</div>
+      <button>Checkout ${totalPrice}</button>
     </div>
   );
 };
