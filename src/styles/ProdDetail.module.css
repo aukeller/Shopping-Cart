@@ -1,0 +1,64 @@
+@font-face {
+  font-family: Roboto-Regular;
+  src: url("../assets/roboto-font/Roboto-Regular.ttf");
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  font-family: Roboto-Regular;
+}
+
+.container div:nth-child(2) {
+  display: flex;
+  flex: 1;
+}
+.container div:nth-child(2) div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  padding-left: 10%;
+  max-height: 850px;
+}
+
+.container div:nth-child(2) div:first-child img {
+  width: 70%;
+  max-height: 80%;
+  object-fit: contain;
+}
+
+.container div:nth-child(2) div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.container div:nth-child(2) div:nth-child(2) :where(h3, span) {
+  font-size: 2em;
+}
+
+.container button {
+  margin-top: 20px;
+  width: 40%;
+  height: 45px;
+
+  background-color: #1f513f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+
+  font-size: 1em;
+  font-weight: 700;
+
+  transition: background-color 0.3s;
+}
+
+.container button:hover {
+  color: #1f513f;
+  background-color: white;
+  border: 1px solid #1f513f;
+}
