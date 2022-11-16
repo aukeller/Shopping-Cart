@@ -1,13 +1,45 @@
+@font-face {
+  font-family: Roboto-Regular;
+  src: url("../assets/roboto-font/Roboto-Regular.ttf");
+}
+
 .productList {
+  font-family: Roboto-Regular;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  justify-items: center;
-  align-items: stretch;
   row-gap: 60px;
 
   margin-top: 5%;
 }
 
-.productList div {
+.productList a,
+.productList a:visited {
+  text-decoration: inherit;
+  color: inherit;
+  padding: 10px;
+}
+
+.productList a div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.productList img {
+  object-fit: cover;
+}
+
+.productList a div > div:first-child {
+  height: 400px;
+  width: 400px;
+}
+
+.productList a div > div:first-child img {
+  object-fit: contain;
   height: 100%;
+  width: 100%;
+}
+
+.productList a div div {
+  padding: 30px;
 }
