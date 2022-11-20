@@ -1,32 +1,143 @@
-.cartContainer {
-  display: flex;
-  flex-direction: column;
-  margin-top: 5%;
-  padding: 0 10%;
+@font-face {
+  font-family: Roboto-Regular;
+  src: url("../assets/roboto-font/Roboto-Regular.ttf");
+}
 
+@font-face {
+  font-family: Roboto-Bold;
+  src: url("../assets/roboto-font/Roboto-Bold.ttf");
+}
+
+.cartProdContainer,
+.cartProd,
+.productList,
+.cartProd div:nth-child(2) {
+  display: flex;
+  font-family: Roboto-Regular;
+}
+.productList {
+  flex-direction: column;
+  margin: 50px 100px;
+  border: 1px solid rgb(204, 204, 204);
+  border-radius: 10px;
+}
+
+.productList .headers {
+  background-color: rgb(224, 224, 224);
+  padding: 10px 20px;
+  margin-bottom: 20px;
+}
+
+.cartProdContainer,
+.cartProd,
+.cartProd div:nth-child(2) {
   align-items: center;
 }
 
-.cartProduct {
+.cartProdContainer {
+  padding: 30px 30px;
+  border-bottom: 1px solid rgb(204, 204, 204);
+}
+
+.cartProd {
+  justify-content: space-between;
+  width: 35%;
+  margin-right: 380px;
+}
+
+.cartProd div:first-child {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  margin-bottom: 8%;
+  height: 100px;
+  width: 100px;
 }
 
-.quantityContainer {
-  width: 50%;
-  height: 10%;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-.quantityContainer button {
+.cartProd img {
   height: 100%;
-  width: 30%;
-  font-size: 20px;
+  max-width: 100px;
+  object-fit: contain;
+}
+
+.cartProd div:nth-child(2) {
+  width: 400px;
+  justify-content: space-between;
+}
+
+.cartProd div:nth-child(2) h3 {
+  margin: 0 40px 0;
+  width: 40%;
+}
+
+.quantity {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100px;
+  margin-right: 500px;
+}
+
+.quantity button {
+  height: 25px;
+  width: 25px;
   background-color: white;
   border: 1px solid black;
+  font-size: 1em;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.quantity button:hover {
+  color: white;
+  background-color: black;
+}
+
+.quantity + div {
+  font-family: Roboto-Bold;
+}
+
+.headers div {
+  position: relative;
+  display: inline;
+  font-family: Roboto-Bold;
+}
+
+.headers div:first-child {
+  left: 20px;
+  margin-right: 510px;
+}
+
+.headers div:nth-child(2) {
+  margin-right: 400px;
+}
+
+.headers div:nth-child(3) {
+  margin-right: 540px;
+}
+
+.totalPrice {
+  font-family: Roboto-Bold;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.totalPrice span {
+  margin-right: 175px;
+  font-size: 1.3em;
+}
+
+.buttonWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+}
+
+.checkout {
+  background-color: #1f513f;
+  color: white;
+  font-family: Roboto-Bold;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  height: 45px;
+  width: 10%;
 }
