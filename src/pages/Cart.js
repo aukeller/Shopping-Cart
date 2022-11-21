@@ -4,6 +4,9 @@ import NavBar from "../components/NavBar";
 import styles from "../styles/Cart.module.css";
 import QuantityClicker from "../components/QuantityClicker";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrashCan } from "@fortawesome/free-regular-svg-icons";
+
 import { useState } from "react";
 
 const Cart = ({ cart, orderCount, setCart }) => {
@@ -51,6 +54,10 @@ const Cart = ({ cart, orderCount, setCart }) => {
     }
   };
 
+  const removeProd = (name) => {
+    setCart(cart.filter((prod) => prod.name !== name));
+  };
+
   const productList = cart.map((prod, idx) => {
     let prodTotalPrice = calculatePrice(prod.price, prod.count);
     return (
@@ -69,6 +76,9 @@ const Cart = ({ cart, orderCount, setCart }) => {
           count={prod.count}
         />
         <div className={styles.totalPrice}>{convertToUSD(prodTotalPrice)}</div>
+        <button className={styles.trash} onClick={() => removeProd(prod.name)}>
+          <FontAwesomeIcon icon={faTrashCan} size="xl" />
+        </button>
       </div>
     );
   });
