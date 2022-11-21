@@ -73,7 +73,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100px;
-  margin-right: 500px;
+  margin-right: 350px;
 }
 
 .quantity button {
@@ -93,6 +93,9 @@
 
 .quantity + div {
   font-family: Roboto-Bold;
+  width: 100px;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .headers div {
@@ -111,7 +114,7 @@
 }
 
 .headers div:nth-child(3) {
-  margin-right: 540px;
+  margin-right: 390px;
 }
 
 .totalPrice {
@@ -128,7 +131,7 @@
 .buttonWrapper {
   display: flex;
   justify-content: center;
-  margin-top: 5%;
+  margin: 20px 0;
 }
 
 .checkout {
@@ -140,4 +143,10 @@
   border-radius: 5px;
   height: 45px;
   width: 10%;
+}
+
+.trash {
+  background-color: white;
+  border: none;
+  cursor: pointer;
 }
