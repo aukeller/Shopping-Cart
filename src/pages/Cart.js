@@ -61,7 +61,7 @@ const Cart = ({ cart, orderCount, setCart }) => {
   const productList = cart.map((prod, idx) => {
     let prodTotalPrice = calculatePrice(prod.price, prod.count);
     return (
-      <div className={styles.cartProdContainer}>
+      <div key={prod.name} className={styles.cartProdContainer}>
         <Product
           className={styles.cartProd}
           name={prod.name}
