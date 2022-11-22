@@ -15,7 +15,7 @@ const Shop = ({ orderCount }) => {
       let image = productInfo[product].image;
 
       productComponents.push(
-        <Link key={`${product}`} to={`/shop/${product}`}>
+        <Link key={`${product}`} to={`/shopping-cart/shop/${product}`}>
           <Product name={name} price={price} image={image} />
         </Link>
       );
