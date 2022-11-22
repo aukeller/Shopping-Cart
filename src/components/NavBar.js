@@ -9,15 +9,15 @@ const NavBar = ({ orderCount }) => {
   return (
     <div className={styles.container}>
       <div>
-        <Link to="/">The Crag</Link>
+        <Link to="/shopping-cart">The Crag</Link>
       </div>
       <ul className={styles.nav}>
         <li>
           <FontAwesomeIcon icon={faBagShopping} size="xs" />
-          <Link to="/shop">Shop</Link>
+          <Link to="/shopping-cart/shop">Shop</Link>
         </li>
         <li>
-          <Link to="/cart">
+          <Link to="/shopping-cart/cart">
             <FontAwesomeIcon icon={faCartShopping} size="xs" />
             <span>{orderCount}</span>
             Cart

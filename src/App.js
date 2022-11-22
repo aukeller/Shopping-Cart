@@ -14,10 +14,16 @@ function App() {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
-        <Route path="/" element={<Home orderCount={orderCount} />} />
-        <Route path="/shop" element={<Shop orderCount={orderCount} />} />
         <Route
-          path="shop/:id"
+          path="/shopping-cart"
+          element={<Home orderCount={orderCount} />}
+        />
+        <Route
+          path="/shopping-cart/shop"
+          element={<Shop orderCount={orderCount} />}
+        />
+        <Route
+          path="/shopping-cart/shop/:id"
           element={
             <ProductDetail
               cart={cart}
