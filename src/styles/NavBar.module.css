@@ -1,11 +1,16 @@
 @font-face {
+  font-family: Roboto-Bold;
+  src: url("../assets/roboto-font/Roboto-Bold.ttf");
+}
+
+@font-face {
   font-family: Roboto-Regular;
   src: url("../assets/roboto-font/Roboto-Regular.ttf");
 }
 
 .container {
   background-color: rgb(224, 224, 224);
-  color: black;
+  color: rgb(78, 78, 78);
 
   height: 100px;
 
@@ -17,14 +22,15 @@
 }
 
 .container div:first-child {
-  font-family: Roboto-Regular;
+  font-family: Roboto-Bold;
   font-size: 3em;
-  letter-spacing: 3px;
+  color: black;
 }
 
 .nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
   width: 30%;
 
   font-family: Roboto-Regular;
@@ -37,7 +43,14 @@ ul {
 
 li a,
 li a:visited {
-  text-decoration: inherit;
-  color: inherit;
   padding: 10px;
+}
+
+li span {
+  font-size: 0.6em;
+  padding: 2px;
+  position: relative;
+  bottom: 25px;
+  color: white;
+  background-color: #1f513f;
 }
