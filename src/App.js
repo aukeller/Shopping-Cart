@@ -12,7 +12,7 @@ function App() {
   const orderCount = cart.reduce((a, b) => a + b.count, 0);
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route path="/" element={<Home orderCount={orderCount} />} />
         <Route path="/shop" element={<Shop orderCount={orderCount} />} />
