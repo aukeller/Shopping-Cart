@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/shopping-cart/static/css/main.4fb72f5a.css",
-    "main.js": "/shopping-cart/static/js/main.252698bc.js",
+    "main.js": "/shopping-cart/static/js/main.ba77dd5d.js",
     "static/media/climbing.jpg": "/shopping-cart/static/media/climbing.c29075f885185b3b4ebd.jpg",
     "static/media/Roboto-Regular.ttf": "/shopping-cart/static/media/Roboto-Regular.a8d6ac03c7b96b7acb62.ttf",
     "static/media/Roboto-Bold.ttf": "/shopping-cart/static/media/Roboto-Bold.75371f53f06181df75f1.ttf",
@@ -24,10 +24,10 @@
     "static/media/rope3.jpg": "/shopping-cart/static/media/rope3.ba8dab91ee59c4636075.jpg",
     "index.html": "/shopping-cart/index.html",
     "main.4fb72f5a.css.map": "/shopping-cart/static/css/main.4fb72f5a.css.map",
-    "main.252698bc.js.map": "/shopping-cart/static/js/main.252698bc.js.map"
+    "main.ba77dd5d.js.map": "/shopping-cart/static/js/main.ba77dd5d.js.map"
   },
   "entrypoints": [
     "static/css/main.4fb72f5a.css",
-    "static/js/main.252698bc.js"
+    "static/js/main.ba77dd5d.js"
   ]
 }
