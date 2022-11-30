@@ -15,7 +15,7 @@ function App() {
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route
-          path="/shopping-cart"
+          path="/shopping-cart/"
           element={<Home orderCount={orderCount} />}
         />
         <Route
